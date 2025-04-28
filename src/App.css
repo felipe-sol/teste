@@ -1,0 +1,333 @@
+/* Hero Section Styles */
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-carousel .carousel-item {
+  height: 100vh;
+}
+
+.hero-carousel .carousel-control-next,
+.hero-carousel .carousel-control-prev {
+  width: 5%;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.hero-carousel .carousel-control-next:hover,
+.hero-carousel .carousel-control-prev:hover {
+  opacity: 1;
+}
+
+.hero-carousel .carousel-control-next-icon,
+.hero-carousel .carousel-control-prev-icon {
+  width: 3rem;
+  height: 3rem;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 1rem;
+}
+
+.hero-carousel .carousel-control-next-icon:hover,
+.hero-carousel .carousel-control-prev-icon:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  padding-top: 80px; /* To account for fixed navbar */
+}
+
+/* Filas Status Styles */
+.filas-status {
+  background-color: #fff;
+  border-bottom: 1px solid #dee2e6;
+  z-index: 1000;
+}
+
+.filas-status .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 10px;
+}
+
+.filas-status .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.filas-status .display-4 {
+  color: #0d6efd;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.filas-status .card-title {
+  color: #212529;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.filas-status .badge {
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+}
+
+/* Contact Section Styles */
+.contact-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.contact-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vw;
+  z-index: 1;
+  opacity: 0.7;
+}
+@media (max-width: 768px) {
+  .contact-map {
+    height: 200px; /* Altura menor para celular */
+  }
+}
+.contact-map iframe {
+  filter: grayscale(50%);
+}
+
+.contact-content {
+  position: relative;
+  z-index:2;
+  padding-top: 80px;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  .contact-content {
+    min-height: 120vh; /* aumenta a altura em telas pequenas */
+    padding-top: 2rem;
+    padding-bottom: 8rem; /* mais espaço para o footer */
+  }
+}
+.contact-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-item {
+  padding: 1.5rem;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.5rem;
+}
+
+.info-item:last-child {
+  margin-bottom: 0;
+}
+
+.info-item h5 {
+  color: #0d6efd;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.info-item p {
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form .form-control {
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  border: 1px solid #dee2e6;
+  transition: all 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.contact-form textarea.form-control {
+  min-height: 150px;
+}
+
+.contact-form .btn-primary {
+  padding: 0.8rem 2rem;
+  border-radius: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.contact-form .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+}
+
+.btn-outline-primary {
+  border-width: 2px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(13, 110, 253, 0.2);
+}
+
+/* Technology Page Styles */
+.hero-section-tecnologia {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/tech-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(13, 110, 253, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* Galeria Styles */
+.card-img-container {
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-container img {
+  transform: scale(1.05);
+}
+
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.navbar-brand img {
+  max-height: 40px;
+}
+
+.card {
+  transition: transform 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  border: none;
+  padding: 12px 30px;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #212529;
+}
+
+footer h5 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+footer p {
+  color: #adb5bd;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    text-align: center;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section-tecnologia {
+    height: 40vh;
+  }
+
+  .card-img-container {
+    height: 200px;
+  }
+}
+
+@media (max-width: 992px) {
+  .contact-content {
+    padding-top: 40px;
+  }
+  
+  .contact-card,
+  .info-card {
+    margin-bottom: 2rem;
+  }
+} 
